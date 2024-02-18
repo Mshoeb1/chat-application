@@ -1,70 +1,137 @@
-# Getting Started with Create React App
+Following are the user interface of chat application **Authentication**.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Refer to the image below:
 
-## Available Scripts
+<div style="text-align: center;">
+    <img src="https://res.cloudinary.com/dwekbzmuw/image/upload/v1708252053/Screenshot_24_a1nzsv.png" alt="registration-page" style="max-width:70%;box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.12)">
+</div>
 
-In the project directory, you can run:
+### Design Files
 
-### `npm start`
+<details>
+<summary>Registraion Route</summary>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [Medium (Size >= 768px), Large (Size >= 992px) and Extra Large (Size >= 1200px) - Login](https://res.cloudinary.com/dwekbzmuw/image/upload/v1708252053/Screenshot_24_a1nzsv.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+</details>
 
-### `npm test`
+<details>
+<summary>Login Route</summary>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [Medium (Size >= 768px), Large (Size >= 992px) and Extra Large (Size >= 1200px) - Home](- [Medium (Size >= 768px), Large (Size >= 992px) and Extra Large (Size >= 1200px) - Login Failure](https://assets.ccbp.in/frontend/react-js/ebank-login-failure-route-img.png))
 
-### `npm run build`
+</details>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<details>
+<summary>Home Route</summary>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [Medium (Size >= 768px), Large (Size >= 992px) and Extra Large (Size >= 1200px) - Home](https://res.cloudinary.com/dwekbzmuw/image/upload/v1708252070/Screenshot_26_mfltx9.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+</details>
 
-### `npm run eject`
+### Set Up Instructions
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<details>
+<summary>Click to view</summary>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Download dependencies by running `npm install`
+- Start up the app using `npm start`
+</details>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Completion Instructions
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<details>
+<summary>Functionality to be added</summary>
+<br/>
 
-## Learn More
+The app must have the following functionalities
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Registration Route**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+  - The new user will have to create account in order to access application 
+  - If the user already have an account they can switch to login page by clicking Login/Sign up link 
+  - If the user entered the username, email, passowrd which is already available in dataBase it throw error error like user credentials already exists please try another one?
+  - When an authenticated user tries to access the Home Route, then the page should be navigated to the Home Route
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+- **Login Route**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+  - When invalid credentials are provided and the **Login** button is clicked, then the error message received from the response should be displayed
+  - When valid credentials are provided and the **Login** button is clicked, then the page should be navigated to the Home Route
+  - When an unauthenticated user tries to access the Home Route, then the page should be navigated to Login Route
+  - When an authenticated user tries to access the Home Route, then the page should be navigated to the Home Route
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- **Home Route**
 
-### Advanced Configuration
+  - When an _authenticated_ user tries to access the Login Route, then the page should be navigated to the Home Route
+  - When the **Logout** button is clicked, then the page should be navigated to the Login Route
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+</details>
 
-### `npm run build` fails to minify
+<details>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<summary>API Requests & Responses</summary>
+<br/>
+
+**loginApiUrl**
+
+#### API: `http://localhost:3000/user/login`
+
+#### Method: `POST`
+
+#### Request:
+
+```json
+{
+  "user_id": 142420,
+  "pin": 231225
+}
+```
+
+#### Description:
+
+Returns a response based on the credentials provided
+
+#### Sample Success Response:
+
+```json
+{
+  "jwt_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjE0MjQyMCIsInJvbGUiOiJQUklNRV9VU0VSIiwiaWF0IjoxNjM0MDk4NzYyfQ.ZUCC2J2zBjRhLVa1EI_4EnkZ-M-7hoVZoZFAu8GTmEQ"
+}
+```
+
+#### Sample Failure Response:
+
+```json
+{
+  "status_code": 401,
+  "error_msg": "Invalid user credential"
+}
+```
+
+</details>
+
+### Important Note
+
+<details>
+<summary>Click to view</summary>
+
+<br/>
+
+**The following instructions are required for the tests to pass**
+
+- Home Route should consist of `/` in the URL path
+- Login Route should consist of `/ebank/login` in the URL path
+- No need to use the `BrowserRouter` in `App.js` as we have already included in `index.js`
+
+
+
+</details>
+
+> ### _Things to Keep in Mind_
+>
+> - All components you implement should go in the `src/components` directory
