@@ -1,0 +1,122 @@
+@media screen and (min-width :768px){
+    .chat-main-cntainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: #bddec5;
+        padding: 20px;
+        width: 65%;
+        height: 90vh;
+        font-family: "Roboto";
+        border-radius: 10px;
+    }
+
+    .chat-heeader-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        width:100%;
+
+    }
+
+    .active-profile-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-self: center;
+
+    }
+
+    .online-heading {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #d2d4d2;
+        padding: 15px;
+        font-size: 20px;
+        font-family: "Roboto";
+        width: 20px;
+        display: flex;
+        border-radius: 100%;
+        margin-right: 15px;
+        border: none;
+    }
+
+    .chat-details {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .name-heading {
+        font-size: 15px;
+        margin-bottom: 0px;
+    }
+
+    .status {
+        font-size: 14px;
+        margin-top: 3px;
+    }
+
+    .delete-button {
+        border: none;
+        outline: none;
+        background-color: transparent;
+        width: 10%;
+        cursor: pointer;
+        margin-right: 20px;
+    }
+
+    .chat-body-container-temp {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        background-color: #ffffff;
+        overflow: auto;
+        flex: 1;
+        padding: 10px;
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+
+    .chat-body-container-temp::-webkit-scrollbar {
+        display: none;
+    }
+
+    .chat-footer-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #ffffff;
+        border-radius: 10px;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .text-input {
+        border: none;
+        outline: none;
+        background-color: transparent;
+        color: black;
+        width: 90%;
+    }
+
+    .send-button {
+        border: none;
+        outline: none;
+        background-color: transparent;
+        width: 10%;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,37 @@
+@media screen and (min-width:768px) {
+    .rec-message-main-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-self: flex-end;
+        margin-right: 10px;
+        background-color: #d5fcd2;
+        min-width: 100px;
+        padding:20px;
+        border-radius: 15px;
+
+    }
+}
+
+.rec-message-main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-self: flex-end;
+    margin-right: 10px;
+    background-color: #d5fcd2;
+    min-width: 100px;
+    padding:10px;
+    border-radius: 15px;
+}
+
+.rec-send-para {
+    font-size: 13px;
+    margin-bottom: 3px;
+    margin-top: 0px;
+}
+.rec-time-para {
+    font-size: 13px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}

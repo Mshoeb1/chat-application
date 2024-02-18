@@ -1,0 +1,42 @@
+@media screen and (min-width: 768px){
+    .profile-item-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        padding: 10px 20px 10px 20px;
+        box-shadow: 0px 8px 40px rgba(7, 7, 7, 0.08);
+        border-radius: 15px;
+        width: 90%;
+        margin-bottom: 9px;
+    }
+
+    .profile-heading {
+        font-size: 15px;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-right: 20px;
+        border-radius: 100%;
+    }
+
+    .profile-text-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .is-messaged {
+        font-size: 13px;
+        margin-bottom: 1px;
+    }
+
+    .last-seen {
+        font-size: 11px;
+        margin-top: 0px;
+    }
+}
